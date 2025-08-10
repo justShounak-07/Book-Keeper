@@ -11,12 +11,37 @@
 <body>
     <h1>Project Library</h1>
     <!-- to display book in the library web page.  -->
-    <div id="libraryDisplay"></div>
+    <div class="control">
+        <button id="addbookbutton"> + Add New Book </button>
+    </div>
+
+    <div id="libraryDisplay">
+        <!-- here the new books will be stored.  -->
+    </div>
+    <dialog id="book-details">
+        <form method="dialog" class="bookForm">
+            <button id="cancel" type="button"> X </button>
+            <div class="form-div">
+                <!-- for book title -->
+                <label for="title">BOOK NAME:</label>
+                <input type="text" id="title">
+                <!-- for author name -->
+                <label for="author">AUTHOR NAME:</label>
+                <input type="text" id="author">
+                <!-- for no. of pages-  -->
+                <label for="pages">NO.OF PAGES:</label>
+                <input type="number" id="pages">
+            </div>
+            <button type="submit" id="submit">Submit</button>
+        </form>
+    </dialog>
+
 
 
     <!-- use of defer so that, we script is loaded after html -->
     <script src="library.js" defer> </script>
 
+    <!-- creating the form for accepting input for adding the book  -->
 
 
 </body>
